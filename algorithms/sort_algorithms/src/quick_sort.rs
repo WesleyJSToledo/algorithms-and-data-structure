@@ -1,6 +1,5 @@
-
 pub fn quick_sort(mut array: Vec<u32>) -> Vec<u32> {
-    let len = array.len() - 1;
+    let len: usize = array.len() - 1;
     quick(&mut array, 0, len);
     return array;
 }
@@ -16,7 +15,6 @@ fn quick(array: &mut Vec<u32>, left: usize, right:usize){
         while array[j] > pivot && j > left {j-=1};
 
         if i > j {break};
-
         array.swap(i, j);
         i+=1;
         j-=1;

@@ -12,13 +12,12 @@ use quick_sort::quick_sort;
 
 use std::{self, collections::HashSet, time::Instant};
 
-const SIZE: usize = 9999;
+const SIZE: usize = 99_999;
 const MIN: u32 = 0;
-const MAX: u32 = 999999;
+const MAX: u32 = 9_999_999;
 
 fn main() {
     let array:Vec<u32> = generate_unique_random_vector();
-
 
     println!("#########################################\n#\t\tStart Sort\t\t#\n#########################################");
 
@@ -26,7 +25,6 @@ fn main() {
     bubble_sort(array.clone());
     let mut time: std::time::Duration = start.elapsed();
     println!("Bubble Sort: \t{:.5} segundos", time.as_secs_f64());
-
 
     start =  Instant::now();
     select_sort(array.clone());
